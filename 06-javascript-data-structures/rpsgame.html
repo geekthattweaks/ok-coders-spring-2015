@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var validChoice = true;
+		while (validChoice == true) {
+			var player1 = prompt("Player 1 choice");
+	        var player2 = prompt("Player 2 choice");
+	        
+
+	        console.log(player1, player2);
+
+
+
+	        function sanityCheck(playerChoice,test){
+		        if (playerChoice != "rock" && playerChoice != "scissors" && playerChoice != "paper"){
+		            alert("Incorrect input for Player" + test + ".");
+		            validChoice=false;
+		        }
+		    }
+
+	        function gameResult(){
+		        if (validChoice==true){
+
+		            if(player1 == player2){
+		                alert("tie");
+		            } else if (player1 == "rock" && player2 == "scissors"){
+		                alert("Player 1 wins!")
+		            } else if (player1 == "scissors" && player2 == "paper"){
+		                alert("Player 1 wins!")
+		            } else if (player1 == "paper" && player2 == "rock"){
+		                alert("Player 1 wins!")
+		            } else {
+		                alert("Player 2 wins!")
+		            }
+		        }
+		    }
+
+		    sanityCheck(player1,1);
+		    sanityCheck(player2,2);
+		    gameResult();
+
+	        console.log("Type quit to exit.");
+        };
+
+
+
+	</script>
+</body>
+</html>
